@@ -26,9 +26,9 @@ BounceBall::~BounceBall()
 void BounceBall::paintEvent(QPaintEvent *event)
 {
         QPainter painter(this);
-        QBrush whiteB(Qt::black);
-        painter.fillRect(0, 0, this->width(), this->height(), whiteB);
-        QPen greenP(Qt::green);
+        QImage im3("D:/Qt/QtProjects/Project1/im3.png","PNG");
+        QBrush bg(im3);
+        painter.fillRect(0, 0, this->width(), this->height(), bg);
         QPen blackP(Qt::white);
         painter.setPen(blackP);
         Rect r1(p1.x(),p1.y(),p1_h);

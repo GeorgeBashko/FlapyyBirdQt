@@ -6,12 +6,8 @@ Rect::Rect(int x1,int y1,int h):x(x1),y(y1),high(h)
 {}
 void Rect::DrawRect(QPainter *paint)
 {
-    paint->drawRect(x,y,100,high);
-    paint->drawRect(x,high+150,100,1000);
-    QImage im1("D:/Qt/QtProjects/Project1/im1.png");
-    QImage im2("D:/Qt/QtProjects/Project1/im2.png");
-    QBrush b1(im2);
-    QBrush b2(im1);
-    paint->fillRect(x,y,100,high,b1);
-    paint->fillRect(x,high+150,100,1000,b2);
+    pix1 = new QPixmap("D:/Qt/QtProjects/Project1/im7.png");
+    pix2 = new QPixmap("D:/Qt/QtProjects/Project1/im2.png");
+    paint->drawPixmap(x,y-50,80,high,*pix1);
+    paint->drawPixmap(x,high+50,80,500,*pix2);
 }

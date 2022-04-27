@@ -2,6 +2,7 @@
 #define RECT_H
 #include<QPoint>
 #include<QPainter>
+#include<QPixmap>
 class Rect
 {
 public:
@@ -11,6 +12,8 @@ private:
     int x;
     int y;
     int high;
+    QPixmap* pix1;
+    QPixmap* pix2;
 };
 
 #endif
